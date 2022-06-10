@@ -1,0 +1,250 @@
+/*
+* ISTE-240 CEJRT Group Project
+* 10/17/2020
+*/
+
+body {
+    background-image: url("../images/bkg.png");
+    margin: 0px;
+}
+
+/*
+* Styling for dropdown menus
+*/
+.dropdown {
+    display: none;
+    background-image: url("../images/bkg.png");
+    color: #d00817;
+    position: absolute;
+    padding: 0px;
+    margin-top: 3px;
+    border: 3px solid #333652;
+    left: 0;
+    right: auto;
+}
+
+.quizans {
+    display: none;
+}
+
+.quizquest {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#outer {
+    border: 5px solid #333652;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+* Dropdown List Item
+*/
+.ddli {
+    display: block;
+    border-top: 3px solid #333652;
+}
+
+.ddli a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 8px;
+    width: 100%;
+    display: block;
+}
+
+.ddli:hover a {
+    background-color: #333652;
+}
+
+/*
+* Move numbering next to content
+*/
+ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+#logo {
+    margin-left: 1vw;
+    margin-top: 1vh;
+    display: block;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+/*
+* Every outer list item for nav
+*/
+.nondrop {
+    display: block;
+    border-right: 5px solid #333652;
+    /*padding-left: 2.7vw;
+	padding-right: 2.7vw;*/
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.nondrop > a {
+    padding-left: 2.7vw;
+    padding-right: 2.7vw;
+}
+
+.nondrop > a {
+    display: block;
+}
+
+.nondrop:hover > a, .dropOuter:hover {
+    background-color: #333652;
+}
+
+/*
+* Outer list item that has a dropdown
+*/
+.dropOuter {
+    color: #d00817;
+	font-size: 1.2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    
+    /* Resolve issue with unwanted whitespace 
+	padding-bottom: 2px;*/
+}
+
+@media screen and (max-width: 1200px) {
+    .dropOuter {
+        color: #d00817;
+        font-size: 3.0vw;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+    }
+}
+
+nav ul li a {
+	color: #d00817;
+	font-size: 1.2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Resolve issue with unwanted whitespace 
+	padding-bottom: 2px;*/
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul li a {
+        color: #d00817;
+        font-size: 3.0vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+nav ul a {
+	text-decoration: none;
+    color: #d00817;
+}
+
+
+
+#first {
+	border-left: 5px solid #333652;
+}
+
+main {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 4px inset #333652;
+    margin-top: 40px;
+    margin-bottom: 40px;
+	margin-left: 100px;
+    margin-right: 100px;
+	color: #ffffff;
+}
+
+footer p { 
+    background-color: #333652;
+    color: #ffffff;
+	text-align: center;
+	font-size: 105%;
+	font-family: Arial, Helvetica, sans-serif;
+	position: fixed;
+	bottom: 0px;
+	margin-bottom: 5px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#hamburgerDiv {
+    display: none;
+    width: 100%;
+    background-color: #333652;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#hamburger {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1201px) {
+    .dropOuter:hover .dropdown {
+        display: block;
+    }
+
+    .dropOuter {
+        padding-left: 2.7vw;
+        padding-right: 2.7vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav > ul {
+        flex-direction: column;
+    }
+
+    #hamburgerDiv {
+        display: block;
+    }
+
+    #outer {
+        display: none;
+    }
+
+    #first {
+        border: none;
+    }
+
+    nav > ul > li:not(#first) {
+        border: none;
+        border-top: 5px solid #333652;
+    }
+
+    nav > ul, nav > ul > li, .nondrop > a {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav > ul > li, nav > ul > li > a {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown {
+        position: static;
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    .dropdown > li, .dropdown > li > a {
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        width: 100%;
+    }
+}
